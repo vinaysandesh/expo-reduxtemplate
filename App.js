@@ -7,12 +7,14 @@ import { Provider } from 'react-redux';
 import Test from './Test';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { theme } from './PaperTheme/Theme';
+import RootScreen from './RootNavigator/RootScreen';
+
 export default function App() {
   return (
    <Provider store={store} >
    <PersistGate loading={null} persistor={persistor}>
    <PaperProvider theme={theme}>
-   <Test/>
+   <RootScreen/>
    </PaperProvider>
    </PersistGate>
    </Provider>
